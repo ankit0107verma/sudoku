@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int D = 9;
+// function for printing board
 void printBoard(int board[D][D], int n) {
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < n; j++) {
@@ -10,7 +11,7 @@ void printBoard(int board[D][D], int n) {
        cout << endl;
 	}
 }
-
+//function to check whether currNum can be placed at a given position
 bool canPlace(int board[D][D], int n, int row, int col, int curNum) {
 	if(board[row][col] != 0) return false; // if it was fixed cell
 	// check the row and column 
