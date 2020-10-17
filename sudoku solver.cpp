@@ -33,7 +33,7 @@ bool canPlace(int board[D][D], int n, int row, int col, int curNum) {
 
 }
 bool solveSudoku(int board[D][D], int n, int row, int col) {
-    if(row == n) {
+    if(row - n == 0) {
     	// this means I have solved the entire board
     	return true;
     }
