@@ -1,7 +1,8 @@
 //17571@nith.ac.in (mail address) @Ankit Verma
 #include<bits/stdc++.h>
 using namespace std;
-const int D = 9;
+const int D = 10;
+//increased the value of D, by one
 // function for printing board
 void printBoard(int board[D][D], int n) {
 	for(int i = 0; i < n; i++) {
@@ -33,7 +34,7 @@ bool canPlace(int board[D][D], int n, int row, int col, int curNum) {
 
 }
 bool solveSudoku(int board[D][D], int n, int row, int col) {
-    if(row - n == 0) {
+    if(row == n) {
     	// this means I have solved the entire board
     	return true;
     }
@@ -65,7 +66,7 @@ void inputMat(int mat[][9], int m, int n) {
 int main()
 {
   int board[D][D] = {0};
-  cout << "Enter size of the board " << endl;
+  cout << "Enter Board " << endl;
   int n; cin >> n; // n should be pefect square
   inputMat(board, n, n);
   bool success = solveSudoku(board, n, 0, 0);
