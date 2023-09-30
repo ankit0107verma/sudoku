@@ -74,7 +74,7 @@ int main()
   	printBoard(board, n);
   }
   else {
-  	cout << "I can't solve neither you can" << endl;
+  	cout << "I can't solve neither can you" << endl;
   }
   return 0;
 }
